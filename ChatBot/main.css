@@ -1,0 +1,26 @@
+body{
+    background-color: lightblue;
+}
+#p1{
+    margin-left:16%;
+    margin-top: 7%;
+    position: absolute;
+    font-size: 340%;
+    text-align: center;
+}
+#p2{
+    margin-left: 5%;
+    margin-top: 17%;
+    position: absolute;
+    font-size: 200%;
+}
+#lekarz{
+    margin-left: 28%;
+    margin-top: 8%;
+    
+}
+#tutaj{
+    width: 10%;
+    height: 10%;
+    margin-bottom: 1%;
+}

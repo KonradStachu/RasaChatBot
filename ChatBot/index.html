@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  Komenda do rozpączęcia rasy na stronie -->
+    <!--  rasa run -m models --enable-api --cors "*" --debug  -->
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div>
+        <p id="p1">Potrzebujesz pomocy?<br> Nie wiesz do kogo się zwrócić?</p>
+        <p id="p2">Nie martw się. <br>
+            Bot zaprogramowany, żeby ci pomóc jest dostępny całą dobę! <br>
+            Wystarczy opisać swoje objawy choroby, a ChatBot poleci Ci specjalistę.<br>
+            Wszystko odbywa się za darmo i bez potrzeby tworzenia konta.<br>
+            Już teraz do niego napisz i przekonaj się sam.<br><br><br><br><br><br><br><br><br><br>
+            Jeśli masz jakieś spostrzeżenia dotyczące ChatBota,<br>
+            napisz do nas: ZespółR@email.com</p>
+        <img src="lekarz.png" id="lekarz">
+        <img src="tutaj.png" id="tutaj">
+    </div>
+    <div id="webchat">
+    <script>
+    !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                initPayload: "Dzień dobry",
+                params: {
+                  storage: 'session'
+                },
+                customData: { language: "pl" },
+                socketUrl: "http://localhost:5005",
+                title: "ChatBot by Zespół R",
+                inputTextFieldHint: "Napisz wiadomość",
+                showFullScreenButton: true,
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+      sessionStorage.clear();
+      </script>
+      </div>
+</body>
+</html>
